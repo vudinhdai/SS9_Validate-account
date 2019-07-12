@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>mail</title>
+</head>
+<body>
+<script>
+    function validateAccount(email) {
+        let RegularExpressionPattern=/^[_a-z0-9]{6,}$/;
+        return RegularExpressionPattern.test(email);
+    }
+    console.log(validateAccount('123abc_'));
+    console.log(validateAccount('_abc123\n'));
+    console.log(validateAccount('______\n'));
+    console.log(validateAccount('123456'));
+    console.log(validateAccount('abcdefg'));
+    console.log(validateAccount('@'));
+    console.log(validateAccount('12345'));
+    console.log(validateAccount('1234_'));
+    console.log(validateAccount('abcde '));
+</script>
+</body>
+</html>
